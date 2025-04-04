@@ -21,11 +21,24 @@ jobs:
            with:
               node-version: 18
 
+         - name: Cache Node Modules
+           uses: actions/cache@v3
+           with:
+              path: ~/.npm
+              key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+              restore-keys: |
+                 ${{ runner.os }}-node-
+
          - name: Install Dependencies
            run: npm ci
+
+         - name: Ensure Test Data Exists
+           run: |
+              mkdir -p data
+              echo '{}' > data/dummyData.json
 
          - name: Run ESLint
            run: npm run lint
 
          - name: Run Tests
-           run: npm test
+           run: NODE_ENV=ci npm test -- --detectOpenHandles --runInBand
