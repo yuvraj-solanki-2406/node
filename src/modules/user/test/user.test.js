@@ -8,7 +8,7 @@ jest.mock("fs/promises", () => ({
     writeFile: jest.fn(),
 }));
 
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5dXZyYWpzb2xha2lAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQzNjg1NjU4LCJleHAiOjE3NDM2ODkyNTh9.4FD1DHsjV3UJl7t0HZs1Ow04PMR5MUm_ZTrkFfiC594";
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5dXZyYWpzb2xha2lAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzQzNzQ4OTcwLCJleHAiOjE3NDM3NTI1NzB9.prtWtDvYrg1PJrmBeBA1LMaMrQTe38tEx3DpAvJ0MrA";
 
 const testUserData = {
     "first_name": "yuvraj",

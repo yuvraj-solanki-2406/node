@@ -36,6 +36,7 @@ const createNewuser = async (userData) => {
         userDummyData.push({ id: userId, ...userData, role });
         await fs.writeFile(userDataFilePath, JSON.stringify(userDummyData, null, 2), "utf-8");
 
+        // eslint-disable-next-line no-unused-vars
         const { password, ...returninguserData } = userData;
         return {
             status: 200,
